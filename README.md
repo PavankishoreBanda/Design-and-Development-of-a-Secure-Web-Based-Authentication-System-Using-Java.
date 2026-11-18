@@ -1,9 +1,7 @@
 # Design-and-Development-of-a-Secure-Web-Based-Authentication-System-Using-Java.
 The application allows users to register, securely log in, log out and access a protected dashboard. It protects user credentials and prevents common authentication attacks.
 # Secure Login and Registration System (Java PBL)
-
 A beginner-friendly Java web application demonstrating secure user authentication.
-
 ## Features
 - User registration and login
 - BCrypt password hashing (cost factor 12)
@@ -16,14 +14,12 @@ A beginner-friendly Java web application demonstrating secure user authenticatio
 - Temporary account lock after five failed attempts (15 minutes)
 - Login activity audit table
 - POST-only logout
-
 ## Requirements
 - JDK 17
 - Apache Maven 3.8+
 - MySQL 8+
 - Apache Tomcat 10.1+
 - Eclipse IDE for Enterprise Java and Web Developers or IntelliJ IDEA
-
 ## Setup
 1. Start MySQL.
 2. Run `database/schema.sql` in MySQL Workbench or the MySQL command line.
@@ -32,7 +28,6 @@ A beginner-friendly Java web application demonstrating secure user authenticatio
 5. In the project directory run: `mvn clean package`
 6. Deploy `target/secure-login.war` to Tomcat 10.1 `webapps` (or run using your IDE's Tomcat server).
 7. Open `http://localhost:8080/secure-login/`
-
 ## Test flow
 1. Register with a valid name, email and password.
 2. Password must be 8–72 characters and include uppercase, lowercase, a digit and a symbol.
@@ -40,7 +35,6 @@ A beginner-friendly Java web application demonstrating secure user authenticatio
 4. Try an incorrect password five times for a registered account; subsequent login attempts are temporarily blocked.
 5. Try opening `/dashboard` in a logged-out browser; it should redirect to login.
 6. Log out and use the browser Back button; the protected page should not be served from cache.
-
 ## Important notes
 - This is a teaching/demo project, not a production-ready identity platform.
 - Configure HTTPS before using it outside localhost.
